@@ -132,7 +132,7 @@ jobs:
   deploy-pages:
     needs: detect
     if: (needs.detect.outputs.has_web == 'true' || needs.detect.outputs.has_python == 'true') && contains(github.event.inputs.targets || 'apk,pip,pages', 'pages')
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     permissions:
       contents: read
       pages: write
