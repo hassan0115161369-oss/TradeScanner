@@ -5,7 +5,7 @@ package.domain = org.trade
 source.dir = .
 source.include_exts = py,png,jpg,jpeg,ttf
 version = 1.0
-requirements = python3,kivy==2.3.1,cython==0.29.36
+requirements = python3,kivy==2.3.1,cython==0.29.33
 orientation = portrait
 fullscreen = 0
 
