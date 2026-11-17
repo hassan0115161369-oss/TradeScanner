@@ -5,9 +5,6 @@ on:
     branches: [ master ]
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
   build-android:
     runs-on: ubuntu-22.04
@@ -29,12 +26,7 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y \
-            git zip unzip \
-            python3-pip autoconf automake \
-            libtool pkg-config zlib1g-dev \
-            libncurses5-dev libncursesw5-dev cmake \
-            libffi-dev libssl-dev curl openjdk-17-jdk libltdl-dev
+          sudo apt-get install -y git zip unzip python3-pip autoconf automake libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev cmake libffi-dev libssl-dev curl openjdk-17-jdk libltdl-dev
 
       - name: Install Buildozer
         run: |
@@ -45,12 +37,9 @@ jobs:
         run: |
           export PATH="$HOME/.local/bin:$PATH"
           echo "y" | buildozer -v android debug
-        continue-on-error: false
 
       - name: Upload APK Artifact
-        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: TradeScanner-APK
           path: bin/*.apk
-          retention-days: 30
