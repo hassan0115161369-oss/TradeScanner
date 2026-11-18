@@ -7,7 +7,8 @@ source.include_exts = py,png,jpg,jpeg,ttf
 version = 1.0
 
 # تحديد إصدارات البايثون بدقة (hostpython3 و python3) لمنع التعارض
-requirements = hostpython3==3.11.5,python3==3.11.5,kivy==2.3.1,requests,urllib3,certifi,openssl,numpy==1.24.2
+
+requirements = python3==3.11.5,hostpython3==3.11.5,kivy==2.3.1,requests,urllib3,certifi,openssl,numpy==1.22.3
 
 orientation = portrait
 fullscreen = 0
