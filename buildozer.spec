@@ -7,7 +7,7 @@ source.include_exts = py,png,jpg,jpeg,ttf
 version = 1.0
 
 # تحديد إصدار بايثون المستقر 3.11 بدلاً من 3.14
-requirements = python3==3.11.5,kivy==2.3.1,requests,urllib3,certifi,openssl
+requirements = python3==3.11.5,hostpython3==3.11.5,kivy==2.3.1,requests,urllib3,certifi,openssl
 
 orientation = portrait
 fullscreen = 0
